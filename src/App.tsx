@@ -2,17 +2,15 @@
 
 
 import styles from './App.module.css';
-import { Post } from './Posts';
-import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
+
+
 import './global.css'
+import { Post, PostType } from './components/Post';
+import { Header } from './components/Header';
+import { Sidebar } from 'phosphor-react';
 
-// author: { avatar_url: "", name: "" , role: ""}
-// publishedAt:  Date
-// content: String
 
-
-const posts = [
+const posts: PostType[] = [
   {
     id: 2,
     author: {
@@ -45,11 +43,7 @@ const posts = [
   },
 
 ]
-
-
 export function App() {
-
-
   return (
     <>
       <Header />
@@ -61,9 +55,7 @@ export function App() {
             return(
               <Post 
                 key={post.id}
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
+                post={post}
                  />
             )
           })}

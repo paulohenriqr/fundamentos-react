@@ -1,10 +1,10 @@
 
-import { Header } from "./components/Header"
-import { Post } from './components/Post'
-import { Sidebar } from "./components/Sidebar";
 
 
 import styles from './App.module.css';
+import { Post } from './Posts';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
 import './global.css'
 
 // author: { avatar_url: "", name: "" , role: ""}
